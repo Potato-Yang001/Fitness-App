@@ -12,7 +12,7 @@ export default function EditTodo() {
     const navigate = useNavigate()
     const id = parseInt(useParams().id)
     const currentTodo = todos.filter((todo) => todo.id === id)
-    const [title, setTitle] = useState(currentTodo.title)
+    //const [title, setTitle] = useState(currentTodo.title)
     const [description, setDescription] = useState(currentTodo.description)
     const [complete, setComplete] = useState(currentTodo.complete)
     const [unit, setUnit] = useState(currentTodo.unit)
@@ -20,7 +20,7 @@ export default function EditTodo() {
     function updateTodo(event) {
         event.preventDefault()
         const updateTodos = todos.map((todo) =>
-            todo.id === id ? { ...todo, title, description, unit, complete } : todo
+            todo.id === id ? { ...todo, description, unit, complete } : todo
         );
         setTodos(updateTodos)
         navigate("/home")
@@ -30,7 +30,7 @@ export default function EditTodo() {
         <Container>
             <h1 className="my-3">Edit Fitness</h1>
             <Form onSubmit={updateTodo}>
-                <Form.Group className='mb-3' controlId='title'>
+                {/*  <Form.Group className='mb-3' controlId='title'>
                     <Form.Label>Title</Form.Label>
                     <Form.Control
                         value={title}
@@ -38,7 +38,7 @@ export default function EditTodo() {
                         onChange={(e) => setTitle(e.target.value)}
                         required
                     />
-                </Form.Group>
+                </Form.Group> */}
 
                 <Form.Group className='mb-3' controlId='description'>
                     <Form.Label>Description</Form.Label>

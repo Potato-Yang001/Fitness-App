@@ -51,7 +51,7 @@ export default function TodoCard({ todo }) {
 
     return (
         <>
-            <Card border={border} className="my-3">
+            <Card border={border} className="my-3" style={{ width: '500px' }}>
                 <Card.Header bg={complete}>{!complete && 'Not'} completed</Card.Header>
                 <Card.Body>
                     <Card.Title>{todo.title}</Card.Title>
