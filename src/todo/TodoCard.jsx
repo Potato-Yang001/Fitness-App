@@ -51,7 +51,7 @@ export default function TodoCard({ todo }) {
 
     return (
         <>
-            <Card border={border} className="my-3" style={{ width: '500px' }}>
+            <Card border={border} className="my-3">
                 <Card.Header bg={complete}>{!complete && 'Not'} completed</Card.Header>
                 <Card.Body>
                     <Card.Title>{todo.title}</Card.Title>
@@ -74,7 +74,7 @@ export default function TodoCard({ todo }) {
                         <i className="bi bi-trash"></i>Delete
                     </Button>
                     <Badge bg={complete ? "success" : "danger"} pill className="mx-2">
-                        {complete ? "Completed" : "Not Completed"}
+                        {complete ? "success" : "danger"} Complete
                     </Badge>
                 </Card.Body>
             </Card>
