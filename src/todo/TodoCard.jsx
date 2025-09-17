@@ -74,7 +74,7 @@ export default function TodoCard({ todo }) {
                         <i className="bi bi-trash"></i>Delete
                     </Button>
                     <Badge bg={complete ? "success" : "danger"} pill className="mx-2">
-                        {complete ? "success" : "danger"} Complete
+                        {complete ? "success" : "danger"}
                     </Badge>
                 </Card.Body>
             </Card>

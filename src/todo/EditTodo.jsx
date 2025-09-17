@@ -20,7 +20,7 @@ export default function EditTodo() {
     function updateTodo(event) {
         event.preventDefault()
         const updateTodos = todos.map((todo) =>
-            todo.id === id ? { ...todo, description, unit, complete } : todo
+            todo.id === id ? { ...todo, title, description, unit, complete } : todo
         );
         setTodos(updateTodos)
         navigate("/home")
